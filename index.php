@@ -130,4 +130,153 @@ echo str_replace("&", "e", $nomeCompleto) . "<br>"; // troca de strings
 echo str_replace($palavraBuscada, $replace, $lemaMarinha) . "<br>";
 echo str_replace($replace, $palavraBuscada, $lemaMarinha) . "<br>";
 
+// INCLUDE E ENQUIRE - AULA 19
+//O require exige que o arquivo exista e esteja funcionando. O include não faz essa exigência e usa o include_path para procurar por arquivos que não encontrar
+
+
+
+// else -if
+
+$qualASuaIdade = 15;
+$idadeCriança = 12;
+$idadeMaior = 18;
+$idadeMelhor = 65;
+
+if ($qualASuaIdade < $idadeCriança) {
+    echo "Criança";
+} else if ($qualASuaIdade < $idadeMaior) {
+    echo "Adolescente";
+} else if ($qualASuaIdade < $idadeMelhor) {
+    echo "Adulto";
+} else {
+    echo "Idoso";
+}
+echo "<br>";
+echo ($qualASuaIdade < $idadeMaior)?"Menor de Idade":"Maior de Idade"; // operador ternário para vrf(s) diretas
+
+
+//SWITCH
+echo "<br>";
+echo "<br>";
+echo "############### SWITCH #####################". "<br>";
+
+$diaDaSemana = date("w"); //retorna o dia da semana em numero
+
+switch ($diaDaSemana) {
+
+    case 0:
+    echo "Domingo";
+    break;
+
+    case 1:
+    echo "Segunda";
+    break;
+
+    case 2:
+    echo "Terça";
+    break;
+
+    case 3:
+    echo "Quarta";
+    break;
+
+    case 4:
+    echo "Quinta";
+    break;
+
+    case 5:
+    echo "Sexta";
+    break;
+
+    case 6:
+    echo "Sábado";
+    break;
+
+    default: // para o caso de ter um caso que não esteja coberto por nenhum dos switchs acima
+    echo "Data inválida";
+    break;
+}
+
+// for  
+echo "<br>";
+echo "<br>";
+echo "############### FOR #####################". "<br>";
+for ($i = 0; $i < 1000; $i+= 5) {
+
+    if ($i >= 200 && $i <= 800) continue;
+
+    if ($i === 900) break;
+
+    echo $i . "<br>";
+
+}
+
+echo "<br/>";
+echo "<select>"; // estudar HTML
+
+for ($i=date("Y"); $i > date("Y")-100 ; $i--) { // parte da data atual até 100 anos para trás
+
+    echo '<option value="'.$i.'">'.$i.'</option>';
+
+}
+
+echo "</select>";
+
+echo "<br>";
+echo "<br>";
+echo "############### FOR EACH #####################". "<br>";
+
+$listaCompras = array("banan", "jaca", "uva", "abacaxi");
+
+foreach ($listaCompras as $lis) {
+    echo $lis . "<br>"; 
+}
+
+echo "<br>";
+echo "<br>";
+echo "############### WHILE E DO-WHILE #####################". "<br>";
+
+$total = 150;
+$desconto = 0.9;
+
+do {
+
+    $total *= $desconto;
+    echo $total . "<br>";
+
+} while ($total > 100);
+
+
+echo "<br>";
+$condicao = true;
+
+while ($condicao) {
+
+    $numero = rand(1, 10);
+
+    if ($numero === 3) {
+
+        echo "TRÊS!!!!";
+        $condicao = false;
+
+    }
+}
+
+
+echo "<br>";
+echo "<br>";
+$valorProduto = 1000;
+$valorDesconto = 5;
+
+if ($valorProduto > 999) {
+    echo $valorProduto - $valorProduto* (5/100);
+
+// auhsuahsuahsuhas
+}
+
+
+
+
+
+
 ?>
