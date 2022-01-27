@@ -271,10 +271,11 @@ $valorDesconto = 5;
 if ($valorProduto > 999) {
     echo $valorProduto - $valorProduto* (5/100);
 
-// auhsuahsuahsuhas
 }
 
-
+echo "<br>";
+echo "<br>";
+echo "############### ARRAY #####################". "<br>";
 
 
 
