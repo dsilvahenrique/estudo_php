@@ -55,5 +55,11 @@ for ($i=0; $i < count($pessoas); $i++) {
 
 //print_r($pessoas[0]);
 
+echo "<br>";
+echo "<br>";
+echo "############### JASON #####################". "<br>";
+ echo " JASON é um padrão de arquivo para garantir a interoperabilidade de sistemas.<br> JASON_ENCONDING gera um jason <br> JASON_DECODING transforma em array por exemplo"
+
+
 
 ?>
